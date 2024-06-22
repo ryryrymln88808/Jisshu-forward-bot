@@ -1,1 +1,10 @@
-
+services:
+  my-service:
+    ports:
+      - target: 8000
+    health_check:
+      protocol: TCP
+      port: 8000
+      interval: 10s
+      timeout: 5s
+      retries: 3
